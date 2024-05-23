@@ -29,6 +29,10 @@ class BlurViewManagerImpl {
     return blurView;
   }
 
+  public static void onDropViewInstance(BlurView view) {
+    view.setBlurEnabled(false);
+  }
+
   public static void setRadius(BlurView view, int radius) {
     view.setBlurRadius(radius);
     view.invalidate();

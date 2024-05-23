@@ -22,6 +22,12 @@ class BlurViewManager extends ViewGroupManager<BlurView> {
     return BlurViewManagerImpl.createViewInstance(context);
   }
 
+  @Override
+  public void onDropViewInstance(BlurView view) {
+      super.onDropViewInstance(view);
+      BlurViewManagerImpl.onDropViewInstance(view);
+  }
+
   @NonNull
   @Override
   public String getName() {
